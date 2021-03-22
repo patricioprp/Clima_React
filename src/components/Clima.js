@@ -1,4 +1,6 @@
 import React from 'react';
+import PropType from 'prop-types'
+
 const Clima = ({resultado}) => {
     //Extraer los valores
     const {name,main} =  resultado;
@@ -23,5 +25,7 @@ const Clima = ({resultado}) => {
         </div>
         )
 }
- 
+    Clima.prototype={
+        resultado: PropType.object.isRequired
+    }
 export default Clima;

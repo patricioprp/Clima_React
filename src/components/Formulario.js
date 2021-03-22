@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import Error from './Error'
+import PropType from 'prop-types'
 
 const Formulario = ({busqueda,guardarBusqueda,guardarConsulta}) => {
 
@@ -75,5 +76,10 @@ const handleSubmit = e => {
         </form>
      );
 }
- 
+
+Formulario.prototype = {
+    busqueda:PropType.object.isRequired,
+    guardarBusqueda:PropType.func.isRequired,
+    guardarConsulta: PropType.func.isRequired
+}
 export default Formulario;
